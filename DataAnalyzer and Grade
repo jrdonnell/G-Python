@@ -1,0 +1,162 @@
+#--- Grade ----
+
+from setup_messagebox import *
+
+gradeA = 0    # First Score
+gradeScoreA = ""
+gradeLetterA = ""
+gradeB = 0    # Second Score
+gradeScoreB = ""
+gradeLetterB = ""
+gradeC = 0    # Third Score
+gradeScoreC = ""
+gradeLetterC = ""
+gradeD = 0    # Fourth Score
+gradeScoreD = ""
+gradeLetterD = ""
+gradeE = 0    # Bonus Score
+gradeScoreE = ""
+gradeLetterE = ""
+gradeF = 0    # Overall Score
+gradeScoreF = ""
+gradeLetterF = ""
+
+
+def getinfo():
+    global gradeA, gradeB, gradeC, gradeD, gradeE, gradeF  # makes grade number available
+
+
+gradeA = int(input("Enter First Score"))
+gradeB = int(input("Enter Second Score"))
+gradeC = int(input("Enter Third Score"))
+gradeD = int(input("Enter Fourth Score"))
+
+
+
+def main():
+    global gradeLetterA, gradeLetterB, gradeLetterC, gradeLetterD, gradeLetterE, gradeLetterF  # makes gradeLetter avail
+    global gradeScoreA, gradeScoreB, gradeScoreC, gradeScoreD, gradeScoreE, gradeScoreF
+
+
+
+
+# call getinfo()
+getinfo()
+
+# First Grade
+
+if gradeA <= 72:
+    gradeScoreA = 100
+elif gradeA <= 80:
+    gradeScoreA = 90
+elif gradeA <= 90:
+    gradeScoreA = 80
+elif gradeA <= 100:
+    gradeScoreA = 70
+else:
+    gradeScoreA = 60
+
+if gradeScoreA >= 100:
+    gradeLetterA = 'A'
+elif gradeScoreA >= 90:
+    gradeLetterA = 'B'
+elif gradeScoreA >= 80:
+    gradeLetterA = 'C'
+elif gradeScoreA >= 70:
+    gradeLetterA = 'D'
+else:
+    gradeLetterA = 'F'
+
+# Second Grade
+
+if gradeB >= 14:
+    gradeScoreB = 100
+elif gradeB >= 11:
+    gradeScoreB = 90
+elif gradeB >= 7:
+    gradeScoreB = 80
+elif gradeB >= 4:
+    gradeScoreB = 70
+else:
+    gradeScoreB = 60
+
+if gradeScoreB >= 100:
+    gradeLetterB = 'A'
+elif gradeScoreB >= 90:
+    gradeLetterB = 'B'
+elif gradeScoreB >= 80:
+    gradeLetterB = 'C'
+elif gradeScoreB >= 70:
+    gradeLetterB = 'D'
+else:
+    gradeLetterB = 'F'
+
+# Third Grade
+
+if gradeC >= 18:
+    gradeScoreC = 100
+elif gradeC >= 13:
+    gradeScoreC = 90
+elif gradeC >= 8:
+    gradeScoreC = 80
+elif gradeC >= 3:
+    gradeScoreC = 70
+else:
+    gradeScoreC = 60
+
+if gradeScoreC >= 100:
+    gradeLetterC = 'A'
+elif gradeScoreC >= 90:
+    gradeLetterC = 'B'
+elif gradeScoreC >= 80:
+    gradeLetterC = 'C'
+elif gradeScoreC >= 70:
+    gradeLetterC = 'D'
+else:
+    gradeLetterC = 'F'
+
+# Fourth Grade
+
+if gradeD <= 36:
+    gradeScoreD = 100
+elif gradeD <= 38:
+    gradeScoreD = 90
+elif gradeD <= 40:
+    gradeScoreD = 80
+elif gradeD <= 42:
+    gradeScoreD = 70
+else:
+    gradeScoreD = 60
+
+if gradeScoreD >= 100:
+    gradeLetterD = 'A'
+elif gradeScoreD >= 90:
+    gradeLetterD = 'B'
+elif gradeScoreD >= 80:
+    gradeLetterD = 'C'
+elif gradeScoreD >= 70:
+    gradeLetterD = 'D'
+else:
+    gradeLetterD = 'F'
+
+# Overall Grade
+
+gradeF = (gradeScoreA + gradeScoreB + gradeScoreC + gradeScoreD)/4
+
+if gradeF >= 100:
+    gradeLetterF = 'A'
+elif gradeF >= 90:
+    gradeLetterF = 'B'
+elif gradeF >= 80:
+    gradeLetterF = 'C'
+elif gradeF >= 70:
+    gradeLetterF = 'D'
+else:
+    gradeLetterF = 'F'
+
+
+main()
+print(" First Grade", gradeLetterA, "\n", "Second Grade", gradeLetterB, "\n", "Third Grade",
+      gradeLetterC, "\n", "Fourth Grade", gradeLetterD, '\n', "Overall Grade", gradeLetterF)
+
+messagebox.showinfo("Your Overall Grade is", gradeLetterF)
